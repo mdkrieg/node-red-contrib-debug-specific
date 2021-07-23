@@ -1,7 +1,7 @@
 # node-red-contrib-debug-specific
 Custom patch to give the option of opening a debug console pop-out window for individual debug nodes
 
-The debug popout feature is great but lacks some of the core features, namely the "filter by selected nodes" features don't work.
+The debug popout feature is great but can only open one instance of it and it doesn't filter for specific nodes.
 
 This registers as a node but patches the interface to add a second button to the debug window which will open a pop-out that listens only to the node which was selected.
 
