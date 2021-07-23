@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-debug-specific",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Adds button to pop out debug window for specific debug node",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,9 +12,6 @@
     "nodes": {
       "debug-specific":"index.js"
     }
-  },
-  "dependencies": {
-    "fs-extra": "10.0.0"
   },
   "author": "Matthew Krieg",
   "license": "MIT"

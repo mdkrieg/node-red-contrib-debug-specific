@@ -71,13 +71,14 @@ function handleDebugMessage(t,o) {
             e.preventDefault();
             var subNodeID = $(".red-ui-flow-node.red-ui-flow-node-group.red-ui-flow-node-selected").prop("id");
             console.log(subNodeID);
-            specialSubWindows[subNodeID] = window.open(document.location.toString().replace(/[?#].*$/, "") + "debug/specific/view.html" + document.location.search, subNodeID, "menubar=no,location=no,toolbar=no,chrome,height=500,width=600");
+            specialSubWindows[subNodeID] = window.open(document.location.toString().replace(/[?#].*$/, "") + "debug/view/view.html" + document.location.search, subNodeID, "menubar=no,location=no,toolbar=no,chrome,height=500,width=600");
             specialSubWindows[subNodeID].onload = function() {
                 specialSubWindows[subNodeID].postMessage({ event: "workspaceChange", activeWorkspace: RED.workspaces.active() }, "*");
             };
         });
         RED.comms.subscribe("debug",handleDebugMessage);
     });
+    
     var buttonWatcher = setInterval(function() {
         // to show and hide the extra button when 
         var selectedNode = $(".red-ui-flow-node.red-ui-flow-node-group.red-ui-flow-node-selected").prop("id");
@@ -97,5 +98,15 @@ function handleDebugMessage(t,o) {
             $("#red-ui-sidebar-debug-specific-open").hide();
         }
     }, 1000);
+    
+    $(window).on('beforeunload',function() {
+        for (var w in specialSubWindows) {
+            try {
+                specialSubWindows[w].close();
+            } catch(err) {
+                console.log(err);
+            }
+        }
+    });
 </script>
 <script type="text/x-red" data-template-name="debug-specific"></script>
