@@ -8,7 +8,7 @@ This registers as a node but patches the interface to add a second button to the
 ![image](https://user-images.githubusercontent.com/66855036/126832236-835d70ac-f762-415e-ad0e-789391ee9d58.png)
 
 TODO:
-* !!! Make the windows close properly on page unload
-* Improve the buttonWatcher function (currently runs on an interval)
-* Since view.html is forked, should clean up the interface by removing non-working features
-* Add some indication to the top of view.html to give a better idea of what node we're listening to
+* [ ] !!! Make the windows close properly on page unload
+* [ ] Improve the buttonWatcher function (currently runs on an interval)
+* [ ] Since view.html is forked, should clean up the interface by removing non-working features
+* [ ] Add some indication to the top of view.html to give a better idea of what node we're listening to
