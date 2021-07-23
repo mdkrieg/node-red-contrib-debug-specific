@@ -10,9 +10,9 @@ This registers as a node but patches the interface to add a second button to the
 ## Release Notes
 #### 0.0.1
 * Realized the whole thing works with the normal debug/view/view.html thus,
-*   Removing the http endpoints from index.js
-*   Removing the hosted lib files
-*   No more npm dependencies :)
+* ----Removing the http endpoints from index.js
+* ----Removing the hosted lib files
+* ----No more npm dependencies :)
 * Got the windows to close on page unload
 #### 0.0.0
 * Initial release
@@ -21,5 +21,5 @@ This registers as a node but patches the interface to add a second button to the
 * [x] Make the windows close properly on page unload
 * [ ] Improve the buttonWatcher function (currently runs on an interval)
 * [ ] Since view.html is forked, should clean up the interface by removing non-working features
-*       view.html no longer forked, was able to use the original /debug/view/view.html
+* ----view.html no longer forked, was able to use the original /debug/view/view.html
 * [ ] Add some indication to the top of view.html to give a better idea of what node we're listening to
